@@ -28,6 +28,8 @@ public class MoppyBridge {
         com = (SerialPort) cpi.open("MoppyDesk", 2000);
         com.setSerialPortParams(SERIAL_RATE, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
         os = com.getOutputStream();
+        try{Thread.sleep(2000);}catch(Exception e){};
+        sendArray(new byte[] {(byte)126,(byte)0,(byte)0});
     }
 
     /**
@@ -86,6 +88,7 @@ public class MoppyBridge {
     public void close(){
         if (os != null){
             silenceDrives();
+            sendArray(new byte[] {(byte)127,(byte)0,(byte)0});
             try {
                 os.close();
             } catch (IOException ex) {
@@ -96,6 +99,17 @@ public class MoppyBridge {
         if (com != null){
             com.close();
         }
+    }
+    
+    public void setDriveMode(int drive, int mode){
+        byte command=0;
+        if(mode==0){ //vibrate
+            command=(byte)100;
+        }else{
+            command=(byte)110;
+        }
+        command+=drive;
+        sendArray(new byte[] {(byte)command,(byte)0,(byte)0});
     }
 
 }

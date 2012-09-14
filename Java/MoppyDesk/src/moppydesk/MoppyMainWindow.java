@@ -117,6 +117,30 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
         loadButton = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
         bpmLabel = new javax.swing.JLabel();
+        driveOneVibrate = new javax.swing.JButton();
+        driveOneMove = new javax.swing.JButton();
+        driveTwoVibrate = new javax.swing.JButton();
+        driveTwoMove = new javax.swing.JButton();
+        driveThreeVibrate = new javax.swing.JButton();
+        driveThreeMove = new javax.swing.JButton();
+        driveFourVibrate = new javax.swing.JButton();
+        driveFourMove = new javax.swing.JButton();
+        driveFiveVibrate = new javax.swing.JButton();
+        driveFiveMove = new javax.swing.JButton();
+        driveSixVibrate = new javax.swing.JButton();
+        driveSixMove = new javax.swing.JButton();
+        driveSevenVibrate = new javax.swing.JButton();
+        driveSevenMove = new javax.swing.JButton();
+        driveEightVibrate = new javax.swing.JButton();
+        driveEightMove = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         connectSeqButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -208,6 +232,158 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
         bpmLabel.setEnabled(false);
         bpmLabel.setName("bpmLabel"); // NOI18N
 
+        driveOneVibrate.setText("Vibrate");
+        driveOneVibrate.setName("driveOneVibrate"); // NOI18N
+        driveOneVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveOneVibrateActionPerformed(evt);
+            }
+        });
+
+        driveOneMove.setText("Move");
+        driveOneMove.setName("driveOneMove"); // NOI18N
+        driveOneMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveOneMoveActionPerformed(evt);
+            }
+        });
+
+        driveTwoVibrate.setText("Vibrate");
+        driveTwoVibrate.setName("driveTwoVibrate"); // NOI18N
+        driveTwoVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveTwoVibrateActionPerformed(evt);
+            }
+        });
+
+        driveTwoMove.setText("Move");
+        driveTwoMove.setName("driveTwoMove"); // NOI18N
+        driveTwoMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveTwoMoveActionPerformed(evt);
+            }
+        });
+
+        driveThreeVibrate.setText("Vibrate");
+        driveThreeVibrate.setName("driveThreeVibrate"); // NOI18N
+        driveThreeVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveThreeVibrateActionPerformed(evt);
+            }
+        });
+
+        driveThreeMove.setText("Move");
+        driveThreeMove.setName("driveThreeMove"); // NOI18N
+        driveThreeMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveThreeMoveActionPerformed(evt);
+            }
+        });
+
+        driveFourVibrate.setText("Vibrate");
+        driveFourVibrate.setName("driveFourVibrate"); // NOI18N
+        driveFourVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveFourVibrateActionPerformed(evt);
+            }
+        });
+
+        driveFourMove.setText("Move");
+        driveFourMove.setName("driveFourMove"); // NOI18N
+        driveFourMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveFourMoveActionPerformed(evt);
+            }
+        });
+
+        driveFiveVibrate.setText("Vibrate");
+        driveFiveVibrate.setName("driveFiveVibrate"); // NOI18N
+        driveFiveVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveFiveVibrateActionPerformed(evt);
+            }
+        });
+
+        driveFiveMove.setText("Move");
+        driveFiveMove.setName("driveFiveMove"); // NOI18N
+        driveFiveMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveFiveMoveActionPerformed(evt);
+            }
+        });
+
+        driveSixVibrate.setText("Vibrate");
+        driveSixVibrate.setName("driveSixVibrate"); // NOI18N
+        driveSixVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveSixVibrateActionPerformed(evt);
+            }
+        });
+
+        driveSixMove.setText("Move");
+        driveSixMove.setName("driveSixMove"); // NOI18N
+        driveSixMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveSixMoveActionPerformed(evt);
+            }
+        });
+
+        driveSevenVibrate.setText("Vibrate");
+        driveSevenVibrate.setName("driveSevenVibrate"); // NOI18N
+        driveSevenVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveSevenVibrateActionPerformed(evt);
+            }
+        });
+
+        driveSevenMove.setText("Move");
+        driveSevenMove.setName("driveSevenMove"); // NOI18N
+        driveSevenMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveSevenMoveActionPerformed(evt);
+            }
+        });
+
+        driveEightVibrate.setText("Vibrate");
+        driveEightVibrate.setName("driveEightVibrate"); // NOI18N
+        driveEightVibrate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveEightVibrateActionPerformed(evt);
+            }
+        });
+
+        driveEightMove.setText("Move");
+        driveEightMove.setName("driveEightMove"); // NOI18N
+        driveEightMove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                driveEightMoveActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Drive 1");
+        jLabel4.setName("jLabel4"); // NOI18N
+
+        jLabel5.setText("Drive 3");
+        jLabel5.setName("jLabel5"); // NOI18N
+
+        jLabel6.setText("Drive 4");
+        jLabel6.setName("jLabel6"); // NOI18N
+
+        jLabel7.setText("Drive 5");
+        jLabel7.setName("jLabel7"); // NOI18N
+
+        jLabel8.setText("Drive 6");
+        jLabel8.setName("jLabel8"); // NOI18N
+
+        jLabel9.setText("Drive 7");
+        jLabel9.setName("jLabel9"); // NOI18N
+
+        jLabel11.setText("Drive 8");
+        jLabel11.setName("jLabel11"); // NOI18N
+
+        jLabel12.setText("Drive 2");
+        jLabel12.setName("jLabel12"); // NOI18N
+
         javax.swing.GroupLayout sequencerControlsPanelLayout = new javax.swing.GroupLayout(sequencerControlsPanel);
         sequencerControlsPanel.setLayout(sequencerControlsPanelLayout);
         sequencerControlsPanelLayout.setHorizontalGroup(
@@ -221,14 +397,64 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
                                 .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(sequenceNameLabel)
                                     .addComponent(jLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(loadButton))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sequencerControlsPanelLayout.createSequentialGroup()
                                 .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
                                 .addComponent(startButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(stopButton))))
+                                .addComponent(stopButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sequencerControlsPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sequencerControlsPanelLayout.createSequentialGroup()
+                                        .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLabel12))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                    .addComponent(driveFourVibrate)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(driveFourMove))
+                                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                        .addComponent(driveOneVibrate)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(driveOneMove))
+                                                    .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                        .addComponent(driveTwoVibrate)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(driveTwoMove))
+                                                    .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                        .addComponent(driveThreeVibrate)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(driveThreeMove))))
+                                            .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                .addComponent(driveFiveVibrate)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(driveFiveMove))
+                                            .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                .addComponent(driveSixVibrate)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(driveSixMove))
+                                            .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                                .addComponent(driveSevenVibrate)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(driveSevenMove))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sequencerControlsPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(driveEightVibrate)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(driveEightMove))))))
                     .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
                         .addGap(136, 136, 136)
                         .addComponent(bpmLabel)))
@@ -245,8 +471,49 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(sequenceNameLabel))
-                            .addComponent(loadButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                            .addGroup(sequencerControlsPanelLayout.createSequentialGroup()
+                                .addComponent(loadButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveOneVibrate)
+                                    .addComponent(driveOneMove)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveTwoVibrate)
+                                    .addComponent(driveTwoMove)
+                                    .addComponent(jLabel12))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveThreeVibrate)
+                                    .addComponent(driveThreeMove)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveFourVibrate)
+                                    .addComponent(driveFourMove)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveFiveVibrate)
+                                    .addComponent(driveFiveMove)
+                                    .addComponent(jLabel7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveSixVibrate)
+                                    .addComponent(driveSixMove)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveSevenVibrate)
+                                    .addComponent(driveSevenMove)
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(driveEightVibrate)
+                                    .addComponent(driveEightMove)
+                                    .addComponent(jLabel11))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(sequencerControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(stopButton)
@@ -275,25 +542,25 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(sequencerControlsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sequencerControlsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(connectSeqButton)
+                        .addGap(0, 623, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(connectSeqButton)
-                .addContainerGap(373, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(connectSeqButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sequencerControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sequencerControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -311,14 +578,14 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(565, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(402, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Bridge", jPanel2);
@@ -333,13 +600,16 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1)
-                    .addComponent(statusLabel)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comSelectionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(statusLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comSelectionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 744, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -349,8 +619,8 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comSelectionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -437,6 +707,102 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
         shutdownSequencer();
     }//GEN-LAST:event_seqTabHidden
 
+    private void driveOneVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveOneVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(1,0);
+        }
+    }//GEN-LAST:event_driveOneVibrateActionPerformed
+
+    private void driveOneMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveOneMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(1,1);
+        }
+    }//GEN-LAST:event_driveOneMoveActionPerformed
+
+    private void driveTwoVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveTwoVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(2,0);
+        }
+    }//GEN-LAST:event_driveTwoVibrateActionPerformed
+
+    private void driveTwoMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveTwoMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(2,1);
+        }
+    }//GEN-LAST:event_driveTwoMoveActionPerformed
+
+    private void driveThreeVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveThreeVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(3,0);
+        }
+    }//GEN-LAST:event_driveThreeVibrateActionPerformed
+
+    private void driveThreeMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveThreeMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(3,1);
+        }
+    }//GEN-LAST:event_driveThreeMoveActionPerformed
+
+    private void driveFourVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveFourVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(4,0);
+        }
+    }//GEN-LAST:event_driveFourVibrateActionPerformed
+
+    private void driveFourMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveFourMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(4,1);
+        }
+    }//GEN-LAST:event_driveFourMoveActionPerformed
+
+    private void driveFiveVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveFiveVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(5,0);
+        }
+    }//GEN-LAST:event_driveFiveVibrateActionPerformed
+
+    private void driveFiveMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveFiveMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(5,1);
+        }
+    }//GEN-LAST:event_driveFiveMoveActionPerformed
+
+    private void driveSixVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveSixVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(6,0);
+        }
+    }//GEN-LAST:event_driveSixVibrateActionPerformed
+
+    private void driveSixMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveSixMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(6,1);
+        }
+    }//GEN-LAST:event_driveSixMoveActionPerformed
+
+    private void driveSevenVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveSevenVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(7,0);
+        }
+    }//GEN-LAST:event_driveSevenVibrateActionPerformed
+
+    private void driveSevenMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveSevenMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(7,1);
+        }
+    }//GEN-LAST:event_driveSevenMoveActionPerformed
+
+    private void driveEightVibrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveEightVibrateActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(8,0);
+        }
+    }//GEN-LAST:event_driveEightVibrateActionPerformed
+
+    private void driveEightMoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_driveEightMoveActionPerformed
+        if(app.ms != null){
+            app.ms.setDriveMode(8,1);
+        }
+    }//GEN-LAST:event_driveEightMoveActionPerformed
+
     private void setSequenceControlsEnabled(boolean enabled) {
         for (Component c : sequencerControlsPanel.getComponents()) {
             c.setEnabled(enabled);
@@ -451,9 +817,33 @@ public class MoppyMainWindow extends javax.swing.JFrame implements MoppyStatusCo
     private javax.swing.JLabel bpmLabel;
     private javax.swing.JComboBox comSelectionMenu;
     private javax.swing.JButton connectSeqButton;
+    private javax.swing.JButton driveEightMove;
+    private javax.swing.JButton driveEightVibrate;
+    private javax.swing.JButton driveFiveMove;
+    private javax.swing.JButton driveFiveVibrate;
+    private javax.swing.JButton driveFourMove;
+    private javax.swing.JButton driveFourVibrate;
+    private javax.swing.JButton driveOneMove;
+    private javax.swing.JButton driveOneVibrate;
+    private javax.swing.JButton driveSevenMove;
+    private javax.swing.JButton driveSevenVibrate;
+    private javax.swing.JButton driveSixMove;
+    private javax.swing.JButton driveSixVibrate;
+    private javax.swing.JButton driveThreeMove;
+    private javax.swing.JButton driveThreeVibrate;
+    private javax.swing.JButton driveTwoMove;
+    private javax.swing.JButton driveTwoVibrate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;

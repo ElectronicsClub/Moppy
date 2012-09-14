@@ -98,4 +98,8 @@ public class MoppySequencer implements MetaEventListener{
             System.out.println("Tempo changed to: " + newTempo);
         }
     }
+    
+    public void setDriveMode(int drive, int mode){
+        mb.setDriveMode(drive, mode);
+    }
 }
