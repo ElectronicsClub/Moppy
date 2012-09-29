@@ -131,11 +131,6 @@ void loop(){
 //Do the dirty work of actually toggling outputs to move the drive heads
 void tick(){
   
-  //Keep direction variables in sync with main variables
-  portddirection=portd;
-  portbdirection=portb;
-  portcdirection=portc;
-  
   /* 
    * If there is a period set for control pin 2, count the number of
    * ticks that pass, and toggle the pin if the current period is reached.
@@ -352,6 +347,11 @@ void tick(){
   PORTD=portd;
   PORTB=portb;
   PORTC=portc;
+  
+  //Keep direction variables in sync with main variables
+  portddirection=portd;
+  portbdirection=portb;
+  portcdirection=portc;
 }
 
 //Resets all the pins
@@ -379,8 +379,8 @@ void resetAll(){
   }
   
   //Reset the outputs to forward
-  PORTD=portd=B00000000;
-  PORTD=portd=B00000000;
-  PORTD=portd=B00000000;
+  PORTD=portd=portddirection=B00000000;
+  PORTB=portb=portbdirection=B00000000;
+  PORTC=portc=portcdirection=B00000000;
 }
 
