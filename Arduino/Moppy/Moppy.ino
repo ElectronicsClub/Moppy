@@ -354,18 +354,20 @@ void tick(){
 void resetAll(){
   
   //Set all the pins to reverse
-  PORTD=B11111100;
-  PORTB=B00111111;
-  PORTC=B00111111;
+  PORTD=B10101000;
+  PORTB=B00101010;
+  PORTC=B00101010;
+  delay(5);
   
   //Toggle all the step pins at the same time
   for(byte s=0;s<80;s++){
-    PORTD=B10101000;
-    PORTB=B00101010;
-    PORTC=B00101010;
     PORTD=B11111100;
     PORTB=B00111111;
     PORTC=B00111111;
+    delay(3);
+    PORTD=B10101000;
+    PORTB=B00101010;
+    PORTC=B00101010;
     delay(5);
   }
   
