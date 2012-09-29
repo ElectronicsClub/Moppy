@@ -21,16 +21,12 @@
 #define FIRST_PIN 2
 #define LAST_PIN 17
 
+//Min and max track position for drives
+#define MIN_POSITION 0
+#define MAX_POSITION 158
+
 //Microsecond resolution for notes
 #define RESOLUTION 20
-
-/*
- * Array of maximum track positions for each step-control pin.  Even pins
- * are used for control, so only even numbers need a value here.  3.5" Floppies have
- * 80 tracks, 5.25" have 50.  These should be doubled, because each tick is now
- * half a position (use 158 and 98).
- */
-const byte maxPosition[]={0,0,158,0,158,0,158,0,158,0,158,0,158,0,158,0,158,0};
 
 //Array to track the current position of each floppy head
 byte currentPosition[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -138,9 +134,9 @@ void tick(){
   if(currentPeriod[2]>0){
     currentTick[2]++;
     if(currentTick[2]>=currentPeriod[2]){
-      if(currentPosition[2]>=maxPosition[2]){
+      if(currentPosition[2]>=MAX_POSITION){
         sbi(portd,3);
-      } else if(currentPosition[2]<=2){
+      }else if(currentPosition[2]<=MIN_POSITION){
         cbi(portd,3);
       }
 
@@ -165,9 +161,9 @@ void tick(){
   if(currentPeriod[4]>0){
     currentTick[4]++;
     if(currentTick[4]>=currentPeriod[4]){
-      if(currentPosition[4]>=maxPosition[4]){
+      if(currentPosition[4]>=MAX_POSITION){
         sbi(portd,5);
-      } else if(currentPosition[4]<=2){
+      }else if(currentPosition[4]<=MIN_POSITION){
         cbi(portd,5);
       }
 
@@ -190,9 +186,9 @@ void tick(){
   if(currentPeriod[6]>0){
     currentTick[6]++;
     if(currentTick[6]>=currentPeriod[6]){
-      if(currentPosition[6]>=maxPosition[6]){
+      if(currentPosition[6]>=MAX_POSITION){
         sbi(portd,7);
-      } else if(currentPosition[6]<=2){
+      }else if(currentPosition[6]<=MIN_POSITION){
         cbi(portd,7);
       }
 
@@ -215,9 +211,9 @@ void tick(){
   if(currentPeriod[8]>0){
     currentTick[8]++;
     if(currentTick[8]>=currentPeriod[8]){
-      if(currentPosition[8]>=maxPosition[8]){
+      if(currentPosition[8]>=MAX_POSITION){
         sbi(portb,1);
-      } else if(currentPosition[8]<=2){
+      }else if(currentPosition[8]<=MIN_POSITION){
         cbi(portb,1);
       }
 
@@ -240,9 +236,9 @@ void tick(){
   if(currentPeriod[10]>0){
     currentTick[10]++;
     if(currentTick[10]>=currentPeriod[10]){
-      if(currentPosition[10]>=maxPosition[10]){
+      if(currentPosition[10]>=MAX_POSITION){
         sbi(portb,3);
-      } else if(currentPosition[10]<=2){
+      }else if(currentPosition[10]<=MIN_POSITION){
         cbi(portb,3);
       }
 
@@ -265,9 +261,9 @@ void tick(){
   if(currentPeriod[12]>0){
     currentTick[12]++;
     if(currentTick[12]>=currentPeriod[12]){
-      if(currentPosition[12]>=maxPosition[12]){
+      if(currentPosition[12]>=MAX_POSITION){
         sbi(portb,5);
-      } else if(currentPosition[12]<=2){
+      }else if(currentPosition[12]<=MIN_POSITION){
         cbi(portb,5);
       }
 
@@ -290,9 +286,9 @@ void tick(){
   if(currentPeriod[14]>0){
     currentTick[14]++;
     if(currentTick[14]>=currentPeriod[14]){
-      if(currentPosition[14]>=maxPosition[14]){
+      if(currentPosition[14]>=MAX_POSITION){
         sbi(portc,1);
-      } else if(currentPosition[14]<=2){
+      }else if(currentPosition[14]<=MIN_POSITION){
         cbi(portc,1);
       }
 
@@ -315,9 +311,9 @@ void tick(){
   if(currentPeriod[16]>0){
     currentTick[16]++;
     if(currentTick[16]>=currentPeriod[16]){
-      if(currentPosition[16]>=maxPosition[16]){
+      if(currentPosition[16]>=MAX_POSITION){
         sbi(portc,3);
-      } else if(currentPosition[16]<=2){
+      }else if(currentPosition[16]<=MIN_POSITION){
         cbi(portc,3);
       }
 
