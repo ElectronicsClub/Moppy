@@ -136,8 +136,10 @@ void tick(){
     if(currentTick[2]>=currentPeriod[2]){
       if(currentPosition[2]>=MAX_POSITION){
         sbi(portd,3);
+        sbi(portddirection,3);
       }else if(currentPosition[2]<=MIN_POSITION){
         cbi(portd,3);
+        cbi(portddirection,3);
       }
 
       //Update currentPosition
@@ -150,10 +152,8 @@ void tick(){
       //Pulse the control pin
       if(ebi(portd,2)){
         cbi(portd,2);
-        cbi(portddirection,2);
       }else{
         sbi(portd,2);
-        sbi(portddirection,2);
       }
       currentTick[2]=0;
     }
@@ -163,8 +163,10 @@ void tick(){
     if(currentTick[4]>=currentPeriod[4]){
       if(currentPosition[4]>=MAX_POSITION){
         sbi(portd,5);
+        sbi(portddirection,5);
       }else if(currentPosition[4]<=MIN_POSITION){
         cbi(portd,5);
+        cbi(portddirection,5);
       }
 
       if(ebi(portd,5)){
@@ -175,10 +177,8 @@ void tick(){
 
       if(ebi(portd,4)){
         cbi(portd,4);
-        cbi(portddirection,4);
       }else{
         sbi(portd,4);
-        sbi(portddirection,4);
       }
       currentTick[4]=0;
     }
@@ -188,8 +188,10 @@ void tick(){
     if(currentTick[6]>=currentPeriod[6]){
       if(currentPosition[6]>=MAX_POSITION){
         sbi(portd,7);
+        sbi(portddirection,7);
       }else if(currentPosition[6]<=MIN_POSITION){
         cbi(portd,7);
+        cbi(portddirection,7);
       }
 
       if(ebi(portd,7)){
@@ -200,10 +202,8 @@ void tick(){
 
       if(ebi(portd,6)){
         cbi(portd,6);
-        cbi(portddirection,6);
       }else{
         sbi(portd,6);
-        sbi(portddirection,6);
       }
       currentTick[6]=0;
     }
@@ -213,8 +213,10 @@ void tick(){
     if(currentTick[8]>=currentPeriod[8]){
       if(currentPosition[8]>=MAX_POSITION){
         sbi(portb,1);
+        sbi(portbdirection,1);
       }else if(currentPosition[8]<=MIN_POSITION){
         cbi(portb,1);
+        cbi(portbdirection,1);
       }
 
       if(ebi(portb,1)){
@@ -225,10 +227,8 @@ void tick(){
 
       if(ebi(portb,0)){
         cbi(portb,0);
-        cbi(portbdirection,0);
       }else{
         sbi(portb,0);
-        sbi(portbdirection,0);
       }
       currentTick[8]=0;
     }
@@ -238,8 +238,10 @@ void tick(){
     if(currentTick[10]>=currentPeriod[10]){
       if(currentPosition[10]>=MAX_POSITION){
         sbi(portb,3);
+        sbi(portbdirection,3);
       }else if(currentPosition[10]<=MIN_POSITION){
         cbi(portb,3);
+        cbi(portbdirection,3);
       }
 
       if(ebi(portb,3)){
@@ -250,10 +252,8 @@ void tick(){
 
       if(ebi(portb,2)){
         cbi(portb,2);
-        cbi(portbdirection,2);
       }else{
         sbi(portb,2);
-        sbi(portbdirection,2);
       }
       currentTick[10]=0;
     }
@@ -263,8 +263,10 @@ void tick(){
     if(currentTick[12]>=currentPeriod[12]){
       if(currentPosition[12]>=MAX_POSITION){
         sbi(portb,5);
+        sbi(portbdirection,5);
       }else if(currentPosition[12]<=MIN_POSITION){
         cbi(portb,5);
+        cbi(portbdirection,5);
       }
 
       if(ebi(portb,5)){
@@ -275,10 +277,8 @@ void tick(){
 
       if(ebi(portb,4)){
         cbi(portb,4);
-        cbi(portbdirection,4);
       }else{
         sbi(portb,4);
-        sbi(portbdirection,4);
       }
       currentTick[12]=0;
     }
@@ -288,8 +288,10 @@ void tick(){
     if(currentTick[14]>=currentPeriod[14]){
       if(currentPosition[14]>=MAX_POSITION){
         sbi(portc,1);
+        sbi(portcdirection,1);
       }else if(currentPosition[14]<=MIN_POSITION){
         cbi(portc,1);
+        cbi(portcdirection,1);
       }
 
       if(ebi(portc,1)){
@@ -300,10 +302,8 @@ void tick(){
 
       if(ebi(portc,0)){
         cbi(portc,0);
-        cbi(portcdirection,0);
       }else{
         sbi(portc,0);
-        sbi(portcdirection,0);
       }
       currentTick[14]=0;
     }
@@ -313,8 +313,10 @@ void tick(){
     if(currentTick[16]>=currentPeriod[16]){
       if(currentPosition[16]>=MAX_POSITION){
         sbi(portc,3);
+        sbi(portcdirection,3);
       }else if(currentPosition[16]<=MIN_POSITION){
         cbi(portc,3);
+        cbi(portcdirection,3);
       }
 
       if(ebi(portc,3)){
@@ -325,10 +327,8 @@ void tick(){
 
       if(ebi(portc,2)){
         cbi(portc,2);
-        cbi(portcdirection,2);
       }else{
         sbi(portc,2);
-        sbi(portcdirection,2);
       }
       currentTick[16]=0;
     }
@@ -353,6 +353,8 @@ void tick(){
 //Resets all the pins
 void resetAll(){
   
+  //Interrupts must be disabled while resetting, otherwise bad things happen
+  cli();
   //Set all the pins to reverse
   PORTD=B10101000;
   PORTB=B00101010;
@@ -364,21 +366,22 @@ void resetAll(){
     PORTD=B11111100;
     PORTB=B00111111;
     PORTC=B00111111;
-    delay(3);
+    delay(100);
     PORTD=B10101000;
     PORTB=B00101010;
     PORTC=B00101010;
-    delay(5);
+    delay(100);
   }
   
   //Reset the current position array
   for (byte p=FIRST_PIN;p<=LAST_PIN;p+=2){
-    currentPosition[p] = 0; // We're reset.
+    currentPosition[p]=0;
   }
   
   //Reset the outputs to forward
   PORTD=portd=portddirection=B00000000;
   PORTB=portb=portbdirection=B00000000;
   PORTC=portc=portcdirection=B00000000;
+  sei();
 }
 
