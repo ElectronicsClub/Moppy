@@ -32,7 +32,7 @@ public class MoppyPlayerOutput implements MoppyReceiver {
     /**
      * Resolution of the Arduino code in microSeconds.
      */
-    public static int ARDUINO_RESOLUTION = 40;
+    public static int ARDUINO_RESOLUTION = 20;
     
     /**
      * Current period of each MIDI channel (zero is off) as set 

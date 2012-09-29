@@ -20,7 +20,7 @@ public class MoppyCOMBridge {
 
     static int FIRST_PIN = 2;
     static int MAX_PIN = 17;
-    int SERIAL_RATE = 9600;
+    int SERIAL_RATE = 115200;
     OutputStream os;
     SerialPort com;
     private boolean isOutputOpen = false;
@@ -31,6 +31,8 @@ public class MoppyCOMBridge {
         com.setSerialPortParams(SERIAL_RATE, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
         os = com.getOutputStream();
         isOutputOpen = true;
+        try{Thread.sleep(1700);}catch(InterruptedException e){}
+        sendArray(new byte[]{(byte) 126, (byte) 0, (byte) 0});
     }
 
     /**
@@ -93,6 +95,7 @@ public class MoppyCOMBridge {
         if (os != null) {
             if (isOutputOpen) { //Only attempt to silence if the output is still open.
                 silenceDrives();
+                sendArray(new byte[]{(byte) 127, (byte) 0, (byte) 0});
             }
             try {
                 os.close();
