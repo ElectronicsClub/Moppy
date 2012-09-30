@@ -378,6 +378,8 @@ void resetAll(){
   //Reset the current position array
   for (byte p=FIRST_PIN;p<=LAST_PIN;p+=2){
     currentPosition[p]=0;
+    currentPeriod[p]=0;
+    currentTick[p]=0;
   }
   
   //Reset the outputs to forward
