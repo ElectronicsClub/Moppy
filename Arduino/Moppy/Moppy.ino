@@ -62,9 +62,6 @@ byte portbdirection=0;
 byte portc=0;
 byte portcdirection=0;
 
-//Holds the last value peeked from serial, used for special commands
-byte lastSerialPeek;
-
 //Initialize the board and get ready to run
 void setup(){
   
@@ -95,31 +92,32 @@ void loop(){
   
   //Don't read from serial until a full message (3 bytes) is available
   if(Serial.available()>2){
-      
-    //Peek at the value from serial
-    lastSerialPeek=Serial.peek();
-    
-    //Flush any remaining messages.
-    while(Serial.available()>0){
-      Serial.read();
-    }
     
     //Watch for special control messages
     //100 resets the drives
-    if(lastSerialPeek==100){
+    if(Serial.peek()==100){
       resetAll();
+      while(Serial.available()>0){
+        Serial.read();
+      }
     //126 turns the power supply on
-    }else if(lastSerialPeek==126){
+    }else if(Serial.peek()==126){
       cbi(portc,4);
       PORTC=portc;
       //Wait for it to activate
       delay(1500);
       //Reset the drives
       resetAll();
+      while(Serial.available()>0){
+        Serial.read();
+      }
     //127 turns the power supply off
-    }else if(lastSerialPeek==127){
+    }else if(Serial.peek()==127){
       sbi(portc,4);
       PORTC=portc;
+      while(Serial.available()>0){
+        Serial.read();
+      }
     }else{
       //Read and store the period data for the drives
       currentPeriod[Serial.read()]=(Serial.read()<<8)|Serial.read();
