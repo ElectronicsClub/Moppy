@@ -32,12 +32,18 @@
 byte currentPosition[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 /*
- * Array of current periods assigned to each pin.  0 = off.  Each period is of the length specified by the RESOLUTION
- * variable above.  i.e. A period of 10 is (RESOLUTION x 10) microseconds long.
+ * Array of current periods assigned to each pin.  0 = off.
+ * Each period is of the length specified by the RESOLUTION
+ * variable above.  i.e. A period of 10 is (RESOLUTION x 10)
+ * microseconds long.
  */
 unsigned int currentPeriod[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
-//Array of current ticks for each pin
+/*
+ * Array of current ticks for each pin.  These count up to the
+ * currentPeriod values in the above array.  When the period
+ * values are reached, the head is stepped.
+ */
 unsigned int currentTick[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 /*
@@ -89,34 +95,31 @@ void loop(){
   
   //Don't read from serial until a full message (3 bytes) is available
   if(Serial.available()>2){
+      
     //Peek at the value from serial
     lastSerialPeek=Serial.peek();
+    
+    //Flush any remaining messages.
+    while(Serial.available()>0){
+      Serial.read();
+    }
     
     //Watch for special control messages
     //100 resets the drives
     if(lastSerialPeek==100){
       resetAll();
-      //Flush any remaining messages.
-      while(Serial.available()>0){
-        Serial.read();
-      }
     //126 turns the power supply on
     }else if(lastSerialPeek==126){
       cbi(portc,4);
       PORTC=portc;
-      //Wait for it to activate and reset the drives
+      //Wait for it to activate
       delay(1500);
+      //Reset the drives
       resetAll();
-      while(Serial.available()>0){
-        Serial.read();
-      }
     //127 turns the power supply off
     }else if(lastSerialPeek==127){
       sbi(portc,4);
       PORTC=portc;
-      while(Serial.available()>0){
-        Serial.read();
-      }
     }else{
       //Read and store the period data for the drives
       currentPeriod[Serial.read()]=(Serial.read()<<8)|Serial.read();
@@ -149,7 +152,7 @@ void tick(){
         currentPosition[2]++;
       }
 
-      //Pulse the control pin
+      //Pulse the step pin
       if(ebi(portd,2)){
         cbi(portd,2);
       }else{
@@ -355,6 +358,7 @@ void resetAll(){
   
   //Interrupts must be disabled while resetting, otherwise bad things happen
   cli();
+  
   //Set all the pins to reverse
   PORTD=B10101000;
   PORTB=B00101010;
@@ -382,6 +386,7 @@ void resetAll(){
   PORTD=portd=portddirection=B00000000;
   PORTB=portb=portbdirection=B00000000;
   PORTC=portc=portcdirection=B00000000;
+  
+  //Re-enable interrupts
   sei();
 }
-
