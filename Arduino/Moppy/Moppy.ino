@@ -105,7 +105,7 @@ void loop(){
       cbi(portc,4);
       PORTC=portc;
       //Wait for it to activate
-      delay(1500);
+      delay(500);
       //Reset the drives
       resetAll();
       while(Serial.available()>0){
@@ -113,6 +113,7 @@ void loop(){
       }
     //127 turns the power supply off
     }else if(Serial.peek()==127){
+      resetAll();
       sbi(portc,4);
       PORTC=portc;
       while(Serial.available()>0){
@@ -375,7 +376,7 @@ void resetAll(){
     delay(100);
   }
   
-  //Reset the current position array
+  //Reset all of the status arrays
   for (byte p=FIRST_PIN;p<=LAST_PIN;p+=2){
     currentPosition[p]=0;
     currentPeriod[p]=0;

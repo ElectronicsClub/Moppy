@@ -31,7 +31,7 @@ public class MoppyCOMBridge {
         com.setSerialPortParams(SERIAL_RATE, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
         os = com.getOutputStream();
         isOutputOpen = true;
-        try{Thread.sleep(1700);}catch(InterruptedException e){}
+        try{Thread.sleep(1600);}catch(InterruptedException e){}
         sendArray(new byte[]{(byte) 126, (byte) 0, (byte) 0});
     }
 

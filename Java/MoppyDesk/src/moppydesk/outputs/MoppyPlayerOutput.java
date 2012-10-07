@@ -48,7 +48,6 @@ public class MoppyPlayerOutput implements MoppyReceiver {
     }
 
     public void close() {
-            mb.resetDrives();
             mb.close();
     }
 
