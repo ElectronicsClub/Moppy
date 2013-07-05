@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To change this template, choose Tools | Templates and open the template in
+ * the editor.
  */
 package electronicsclub.moppyproject.ui;
 
@@ -80,8 +80,6 @@ public class MoppyControlWindow extends javax.swing.JFrame {
 
         for (OutputSetting s : outputSettings) {
             ChannelOutControl newControl = new ChannelOutControl(this, s);
-            // TODO Read in preferences here? Serialize all properties to
-            // preferences?
             mainOutputPanel.add(newControl);
         }
         mainOutputPanel.revalidate();

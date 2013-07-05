@@ -59,7 +59,6 @@ public class MoppyMIDIInput implements Transmitter, Receiver {
 
     @Override
     public void send(MidiMessage message, long timeStamp) {
-        // TODO Edit message based on settings.
         if (downstreamReceiver != null)
             downstreamReceiver.send(message, timeStamp);
     }
